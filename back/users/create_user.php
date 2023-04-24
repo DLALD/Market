@@ -3,7 +3,7 @@ include_once("../config/cnx_db.php");
 $FirsName=$_POST['f_name'];
 $LastName =$_POST['l_name'];
 $email=$_POST['email'];
-$pass=$_POST['passwd'];
+$pass=md5($_POST['passwd']);
 $sql = " INSERT INTO users (Firs_Name,Last_Name,email,password) 
 values('$FirsName','$LastName','$email','$pass')";
 //$conn->query($sql);
