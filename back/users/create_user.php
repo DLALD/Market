@@ -8,7 +8,7 @@ $sql = " INSERT INTO users (Firs_Name,Last_Name,email,password)
 values('$FirsName','$LastName','$email','$pass')";
 //$conn->query($sql);
 if($conn->query($sql)===TRUE){
-    echo "User has been Create Successfully";
+  echo "User has been Create Successfully";
 }else{
     echo "Error:"-$conn->error;
 }
