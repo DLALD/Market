@@ -8,7 +8,7 @@
     <title>Lista de Usuarios</title>
 </head>
 <body>
-    <table border="1" aling ="center">
+    <table border="1" class="table"  aling ="center">
         <tr><th>Firstname</th><th>Lastname</th><th>email</th></tr>
         <?php
         $sql="SELECT*FROM users";
@@ -19,10 +19,12 @@
                 <td>".$row['Firs_Name']."</td>
                 <td>".$row['Last_Name']."</td>
                 <td>".$row['email']."</td>
-                <td><a href='edit_user.php?id=".$row['id']."'></td></tr>
-                <img src'../../front/icons/update.php'whidth='10'></a>&nbsp;
-                <td><a href='delete.user.php?id=".$row['id']."'>
-                <img src'../../front/icons/update.php'></a></td></tr>";
+                <td><a href='edit_user.php?id=".$row['id']."'></td>
+                <img src='../../front/icons/update.php'whidth='10'></a>&nbsp;
+              
+                <td><a href='http://127.0.0.1/Market/back/users/delete_user.php?id=".$row['id']."'>
+                <img src = '../../front/icons/update.php'></a></td>
+                </tr>";
             }//while
         }else{
         echo "no data";
